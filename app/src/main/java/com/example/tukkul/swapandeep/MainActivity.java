@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Order Summary Ready", Toast.LENGTH_SHORT).show();
     }
 
-    public void sendMail(View view){
+    public void sendMail(View view) {
         CheckBox whippedCreamCheckBox = findViewById(R.id.whipped_cream_checkbox);
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         String name = nameField.getText().toString();
 
         int price = calculatePrice(hasWhippedCream, hasChocolate);
-        String priceMessage = createOrderSummary(price,hasWhippedCream, hasChocolate, name);
+        String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate, name);
 
         Toast.makeText(this, "Order Placed", Toast.LENGTH_SHORT).show();
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee Order for " + name);
         intent.putExtra(Intent.EXTRA_TEXT, priceMessage);
-        intent.putExtra(Intent.EXTRA_EMAIL,new String[] { "swapnadeep456@gmail.com" });
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"swapnadeep456@gmail.com"});
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -104,22 +104,22 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Calculates the price of the order.
      *
-     * @param addChocolate is whether or not the user wants chocolate topping
+     * @param addChocolate    is whether or not the user wants chocolate topping
      * @param addWhippedCream is whether or not the user wants whipped cream toppings
      * @return total price
      */
 
     public int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
         // Price of 1 cup of coffee
-        int basePrice =5;
+        int basePrice = 5;
 
         // Add $1 if the user wants whipped cream
-        if (addWhippedCream){
+        if (addWhippedCream) {
             basePrice = basePrice + 1;
         }
 
         // Add $2 if the user wants chocolate
-        if (addChocolate){
+        if (addChocolate) {
             basePrice = basePrice + 2;
         }
 
@@ -129,10 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * create summary of the order
-     * @param name of the customer
-     * @param addChocolate is whether or not the user wants chocolate topping
+     *
+     * @param name            of the customer
+     * @param addChocolate    is whether or not the user wants chocolate topping
      * @param addWhippedCream is whether or not the user wants whipped cream toppings
-     * @param price of the order
+     * @param price           of the order
      * @return text summary
      */
 
@@ -149,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given quantity value on the screen
      */
-    private void displayQuantity(int quantity){
+    private void displayQuantity(int quantity) {
         TextView quantityTextView = findViewById(
                 R.id.quantity_text_view);
         quantityTextView.setText("" + quantity);

@@ -16,15 +16,15 @@
 
         <EditText
             android:id="@+id/name_field"
-            android:inputType="textCapWords"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="@string/name"/>
+            android:hint="@string/name"
+            android:inputType="textCapWords" />
 
         <TextView
-            android:text="@string/toppings"
-            style="@style/Header"/>
+            style="@style/Header"
+            android:text="@string/toppings" />
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
@@ -43,8 +43,8 @@
             android:textSize="16sp" />
 
         <TextView
-            android:text="@string/quantity"
-            style="@style/Header"/>
+            style="@style/Header"
+            android:text="@string/quantity" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
 
         <TextView
             style="@style/Header"
-            android:text="@string/price"/>
+            android:text="@string/price" />
 
         <TextView
             android:id="@+id/order_summary_text_view"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="@string/dollar"
             android:textColor="@android:color/black"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -101,9 +101,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="sendMail"
             android:layout_marginBottom="16dp"
-            android:text="@string/send"/>
+            android:onClick="sendMail"
+            android:text="@string/send" />
 
     </LinearLayout>
 
