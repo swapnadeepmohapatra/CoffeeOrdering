@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="send">Send to Client</string>
+    <string name="order">Order Summary</string>
+    <string name="dollar">The Price is : ₹ 5</string>
+    <string name="price">Order Summary</string>
+    <string name="plus">+</string>
+    <string name="zero">1</string>
+    <string name="minus">-</string>
+    <string name="quantity">Quantity</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="toppings">Toppings</string>
+    <string name="name">Name</string>
+    <string name="thank_you">Thank You !</string>
+    <string name="app_name">Coffee Ordering</string>
+</resources>
